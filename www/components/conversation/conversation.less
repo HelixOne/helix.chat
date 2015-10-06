@@ -1,0 +1,172 @@
+.conversation-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 65px;
+    right: 0;
+    left: 0;
+    bottom: 15px;
+    background-color: #eee;
+}
+
+.conversation {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    h3 {
+        font-size: 0.9em;
+        margin: 0.1em;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        line-height: 2;
+        span {
+            font-size: 0.8em;
+            color: #656565;
+            padding: 0 10px;
+        }
+    }
+    .card {
+        width: 85%;
+        max-width: 800px;
+        min-height: 400px;
+        max-height: 100%;
+        height: 100%;
+        background-color: #fff;
+        margin: auto;
+       // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transition: all 0.2s ease-in-out;
+        display: block;
+        position: relative;
+        &:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .users {
+            width: 55px;
+            padding-bottom: 15px;
+            position: absolute;
+            left: -60px;
+            overflow: hidden;
+            .tooltip {
+                min-width: 75px;
+                position: fixed;
+                background-color: #373739;
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
+                opacity: 0;
+                -webkit-transition: opacity .3s ease-in .3s;
+                transition: opacity .3s ease-in .3s;
+                border-radius: 5px;
+                padding: 5px;
+                font-size: .75em;
+                color: white;
+                z-index: 9999;
+                left: 75px;
+                /* transform: translateX(-50%);
+  width: 140px;
+  visibility: hidden;
+  background-color: #373739;
+  color: #fff;
+  font-size: 12px;
+  font-family: Helvetica,Arial,sans-serif;
+  cursor: default;
+  text-shadow: none;
+  text-align: center;
+  overflow: visible;
+  padding: 10px 15px;
+  border: 1px solid #6d6e71;
+  border-top-color: #373739;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.15);
+  -webkit-transition: opacity .3s ease-in .3s;
+  transition: opacity .3s ease-in .3s;  
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;*/
+            }
+            .user {
+                width: 50px;
+                height: 35px;
+                margin: 5px;
+                background-color: #fff;
+                border-radius: 25px;
+                text-align: center;
+                text-transform: uppercase;
+                padding-top: 15px;
+                box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.16);
+                &:hover .tooltip,
+                &:focus .tooltip,
+                &:active .tooltip {
+                    opacity: 1;
+                }
+                &:hover {
+                    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+                }
+            }
+        }
+
+        button{
+            
+        }
+        .message-input {
+           .flex-justify(center);
+           width: 100%;
+            //
+            textarea:focus {
+                outline: none;
+                background-color: #f6f6f6;
+            }
+            textarea {
+                 width: 80%;
+                padding: 5px;
+                margin: 0;
+                border: 0;
+                height: 25px;
+                background-color: #f0f0f0;
+                color: #333;
+                max-height: 250px;
+                resize: none;
+                margin-bottom: -13px;
+            }
+        }
+        .message-send {
+            width: 20%;
+        }
+        .picker {
+            display: none;
+        }
+        .messages {
+            position: absolute;
+            top: 0;
+            bottom: 55px;
+            left: 0;
+            right: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            touch-action: pan-y;
+            -webkit-overflow-scrolling: touch;
+            img.image {
+                width: 100%;
+                height: auto;
+            }
+            .text {
+                max-width: 800px;
+                margin: auto;
+                p {
+                    margin: 0;
+                    padding: 0 15px;
+                    white-space: pre-wrap;
+                    margin-bottom: 20px;
+                    line-height: 1.5;
+                    font-size: 1.1em;
+                    color: #333;
+                }
+            }
+        }
+        form.message-enter {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}

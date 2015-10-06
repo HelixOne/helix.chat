@@ -1,0 +1,132 @@
+body {
+    background: #030828;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+main {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+main div {
+    color: white;
+    width: 50%;
+    padding: 20px;
+    overflow: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 10em;
+    font-weight: 100;
+    margin: 0.1em;
+}
+
+p {}
+
+button {
+    padding: 10px;
+    border-radius: 0;
+    border: 0;
+    margin: 1px;
+    background-color: #eee;
+    color: #333;
+}
+
+.sr-only {
+    display: none;
+}
+
+.pull-right {
+    float: right;
+}
+
+.card .header {
+    width: 100%;
+    height: 45px;
+}
+
+input#text {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 35px;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.home {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 50px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #eee;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.inbox {
+    background-color: #f6f6f6;
+    overflow: auto;
+    height: 100%;
+    margin: auto;
+    order: 1;
+    flex: 2 0px;
+}
+
+.feed {
+    background-color: #cdd6dc;
+    max-width: 375px;
+    overflow: auto;
+    height: 100%;
+    display: block;
+    margin: auto;
+    order: 2;
+    flex: 1 auto;
+}
+form{
+    width: 100%;
+}
+.message-input{
+    width: 85%;
+}
+.message-send{
+    width: 15%;
+}
+.card {
+    width: 350px;
+    height: 400px;
+    background-color: #fff;
+    margin: 15px;
+    padding: 10px;
+    float: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

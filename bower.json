@@ -1,0 +1,30 @@
+{
+  "name": "Helix.Chat",
+  "description": "A good place to have a conversation.",
+  "version": "1.0.0",
+  "authors": [
+    "Zubair Lawrence <zubairla@lizardpro.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.1",
+    "angular-animate": "1.4.1",
+    "angular-elastic": "2.4.2",
+    "angular-loading-bar": "0.7.1",
+    "angular-route": "1.4.1",
+    "angular-resource": "1.4.1",
+    "angular-sanitize": "1.4.1",
+    "font-awesome": "~4.3.0",
+    "particles.js": "1.x.x",
+    "less": "*",
+    "moment": "*"
+  }
+}

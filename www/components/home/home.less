@@ -1,0 +1,106 @@
+.home {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    .wrapper {
+        width: 85%;
+        padding: 20px;
+        overflow: auto;
+        text-align: center;
+        max-width: 1024px;
+        pointer-events: none;
+
+        img.logo {
+            width: 65%;
+        }
+    }
+    .info {
+        padding: 15px;
+    }
+    .nameGen {
+        width: 85%;
+        margin: auto;
+        pointer-events: all;
+        input {
+            text-align: center;
+            background-color: rgba(255,255,255,0.5)
+        }
+        button {
+            .shadow;
+            margin: 10px auto;
+            width: 35%;
+            background-color: #adadb7;
+            color: white;
+            outline: none;
+        }
+        button:active {
+            .shadow-deep;
+            outline: none;
+        }
+    }
+    h1 {
+        font-size: 9vmin;
+        font-weight: 100;
+        margin: 0;
+        line-height: 0.8em;
+    }
+    h3 {
+        font-size: 5vmin;
+        font-weight: 100;
+        text-align: right;
+        margin: auto;
+        white-space: nowrap;
+    }
+    #particles-js {
+        height: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.75;
+        z-index: -1;
+    }
+}
+
+@media (max-width: @screen-sm-min) and (orientation:landscape) {
+    .home {
+        .wrapper {
+            margin-top: 145px;
+        }
+    }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: @screen-sm-min) {
+    .home {
+        p {
+            font-size: 1em;
+        }
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: @screen-md-min) {
+    .home {}
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: @screen-lg-min) {
+    .home {}
+}

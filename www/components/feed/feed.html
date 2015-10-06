@@ -1,0 +1,8 @@
+<div ng-repeat="(key, value) in feed" class="card">
+<h3>{{value.conversation[0].username}}</h3>
+    <div ng-repeat="(i, message) in value.conversation">
+        <span ng-if="message.type == 'image'"><img src="{{message.data}}"/></span>
+        <p ng-if="message.type == 'text'">{{message.data}}</p>
+        <p ng-if="message.type == 'link'"><a href="{{message.data}}" target="_blank">Read More</a></p>
+    </div>
+</div>

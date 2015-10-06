@@ -1,0 +1,8 @@
+<div>
+    <div ng-controller="AuthController" ng-if="!username.is">
+        <div class="auth" ng-include="'components/auth/auth.html'"></div>
+    </div>
+    <div ng-controller="ConversationController" ng-if="username.is">
+        <div class="conversation-wrapper" ng-include="'components/conversation/conversation.html'"></div>
+    </div>
+</div>

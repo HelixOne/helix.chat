@@ -1,0 +1,39 @@
+<div class="conversation">
+    <div class="card">
+        <div class="users">
+            <div ng-repeat="user in users" class="user" ng-style=" color($index)">
+                {{user |usernameFormat}}
+                <span class="tooltip">{{user}}</span>
+            </div>
+        </div>
+        <div class="messages">
+            <div ng-repeat="(i, message) in conversation" ng-class="message.type">
+                <h3 ng-if="message.username !=  conversation[(i-1)].username">{{message.username}} <span>{{message.timestamp|formatTimestamp}}</span></h3>
+                <span ng-if="message.type == 'image'"><img class="image" src="{{message.data}}"/></span>
+                <p ng-if="message.type == 'text'">{{message.data}}</p>
+                <p ng-if="message.type == 'link'"><a href="{{message.data}}" target="_blank">Read More</a></p>
+            </div>
+            <video autoplay ng-show="showVideo"></video>
+            <span ng-if="tmpImage"><img class="tmp-image" ng-src="{{tmpImage}}"/></span>
+            <h1 class="loader" ng-if="isLoading0">
+                  <span>L</span>
+                  <span>O</span>
+                  <span>A</span
+                  <span>D</span>
+                  <span>I</span>
+                  <span>N</span>
+                  <span>G</span>
+            </h1>
+        </div>
+        <form ng-submit="sendMessage()" class="message-enter">
+            <div class="message-input  pull-left">
+                <label for="text" class="sr-only">Enter Message</label>
+                <textarea type="text" class="form-control" id="text" ng-model='newMessage._text' ng-enter="sendMessage()" placeholder="Enter Message" autocomplete="false" rows="1" tasize></textarea>           
+                <button type="submit" class="btn btn-default" ng-click="sendMessage()" rows="1">Submit</button>
+                <button ng-click="fileOpener()"><i class="fa fa-upload"></i></button>
+                <button ng-click="openVideo()"><i class="fa fa-camera-retro"></i></button>
+            </div>
+            <input class="picker" type="file" id="files" name="files[]" multiple file-select="file" />
+        </form>
+    </div>
+</div>
