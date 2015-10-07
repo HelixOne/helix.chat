@@ -10,7 +10,7 @@ var serve = require('koa-static');
 var fs = require('fs');
 var port = process.env.port || 1337;
 
-
+var servDir = __dirname + '/build'
 
 var co = require('co')
 
@@ -52,7 +52,7 @@ app.use(function* pageNotFound(next) {
     switch (this.accepts('html', 'json')) {
         case 'html':
             this.type = 'html';
-            this.body = this.body = yield readFileThunk(__dirname + '/www/404.html');;
+            this.body = this.body = yield readFileThunk(servDir + '/404.html');;
             break;
         case 'json':
             this.body = {
@@ -65,7 +65,7 @@ app.use(function* pageNotFound(next) {
     }
 })
 
-app.use(serve(__dirname + '/www'));
+app.use(serve(servDir));
 
 
 //routes
@@ -93,7 +93,7 @@ var delTimeout = 1000 * 60 * 60 * 24;
 
 
 function* a() {
-    this.body = yield readFileThunk(__dirname + '/www/app.html');
+    this.body = yield readFileThunk(servDir + '/app.html');
 }
 
 function* chat(id) {

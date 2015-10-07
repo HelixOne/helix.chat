@@ -13,14 +13,18 @@
     <meta name="mobileoptimized" content="0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="misapplication-tap-highlight" content="no" />
+    <!-- build:css -->
     <!-- bower:css -->
     <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.css' />
     <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css' />
     <!-- endbower -->
+   
     <link rel="stylesheet/less" type="text/css" href="css/app.less" />
+    <!-- endbuild -->
 
-    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'  data-ignore=true>
+    <link href='//fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'  data-ignore=true>
 </head>
 
 <body>
@@ -28,6 +32,8 @@
         <h1>Helix.Chat</h1></header>
     <ng-view>
     </ng-view>
+    <script src="/socket.io/socket.io.js" data-ignore=true></script>
+    <!-- build:js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -41,9 +47,9 @@
     <script src="bower_components/moment/moment.js"></script>
     <!-- endbower -->
     <!-- <script>less.watch();</script> -->
-    <script src="/socket.io/socket.io.js"></script>
     <!-- injector:js -->
     <script src="/components/app/App.js"></script>
+    <script src="/components/app/templates.js"></script>
     <script src="/components/app/AppApi.js"></script>
     <script src="/components/app/AppController.js"></script>
     <script src="/components/app/AppLibrary.js"></script>
@@ -53,6 +59,7 @@
     <script src="/components/home/HomeController.js"></script>
     <script src="/components/route/RouteController.js"></script>
     <!-- endinjector -->
+    <!-- endbuild -->
 
     
 </body>
