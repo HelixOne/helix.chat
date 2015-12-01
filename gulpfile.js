@@ -10,7 +10,7 @@ var templateCache = require('gulp-angular-templatecache');
 
 
  
- var htmlSrc = 'www/app.html';
+ var htmlSrc = './www/app.html';
 gulp.task('html', function() {
   gulp.src(htmlSrc)
     .pipe(htmlreplace({
@@ -24,11 +24,9 @@ gulp.task('html', function() {
 
 gulp.task('copy-js', function() {
     gulp.src(htmlSrc)
+        .pipe(debug({ title: 'before'}))
         .pipe(ghtmlSrc())
-        // From this point, it's as if you'd used gulp.src() listing each of your 
-        // javascript files that are in your html as <script src="..."></script>
-       //.pipe(function(x){console.log(x); return x})
-       // .pipe(uglify({mangle: false}))
+         .pipe(debug({ title: 'after'}))
         .pipe(concat('app.min.js'))
         .pipe(gulp.dest('./build/javascript/'));
 
